@@ -41,7 +41,7 @@ $('.projects_gallery').slick({
     arrows: false,
     dots: false,
     fade: true,
-    asNavFor: '.projects_menu_slider' // указываем что навигация для слайдера будет отдельно (указываем класс куда вешаем навигацию)
+    asNavFor: '.projects_menu_slider'
     });
 
     $('.projects_menu_slider').slick({ 
@@ -61,14 +61,22 @@ $('.reviews_slider').slick({
 
     $('.reviews_slider_navigation').slick({
     	centerMode: true,
-    	centerPadding: '60px',
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        variableWidth: true,
-        speed: 10,
-        arrows: false,
-        asNavFor: '.reviews_slider',
-        focusOnSelect: true 
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      variableWidth: true,
+      speed: 10,
+      arrows: false,
+      asNavFor: '.reviews_slider',
+      focusOnSelect: true,
+      responsive: [
+    {
+      breakpoint: 497,
+      settings: {
+        slidesToShow: 5,
+        speed: 200
+      }
+    }
+  ]
     });
 
 	$('.reviews_slider').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {

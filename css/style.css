@@ -2133,7 +2133,7 @@ body {
 	}
 
 	.titles_slider_item {
-	    padding: 30px 0;
+	    padding: 60px 0;
 	}
 
 	.titles_slider_item h3 {
@@ -2303,7 +2303,11 @@ body {
 	}
 
 	.slick-center {
-	    margin: 0 20px;
+	    margin: 0 10px;
+	}
+
+	.counter {
+		font-size: 14px;
 	}
 
 	#blog {
