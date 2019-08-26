@@ -15,22 +15,18 @@ $('.services_slider').slick({
     slidesToScroll: 1,
     responsive: [
     {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      },
 
-      breakpoint: 768,
+      breakpoint: 770,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      },
+        slidesToShow: 2
+      }
+    },
+
+    {
 
       breakpoint: 576,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToShow: 1
       }
     }
 
@@ -47,8 +43,16 @@ $('.projects_gallery').slick({
     $('.projects_menu_slider').slick({ 
         slidesToShow: 5, 
         asNavFor: '.projects_gallery',
-        variableWidth: true,
-        focusOnSelect: true 
+        variableWidth: false,
+        focusOnSelect: true,
+        responsive: [
+          {
+            breakpoint: 400,
+            settings: {
+              variableWidth: true
+            }
+          }
+      ]
     });
 
 $('.reviews_slider').slick({ 
@@ -101,7 +105,7 @@ $(".header_menu").on("click","a", function (event) {
         event.preventDefault();
         $('.header_menu').toggleClass('phone_menu_active');
         var id  = $(this).attr('href'),
-        top = $(id).offset().top - 80;
+        top = $(id).offset().top - 180;
         $('body,html').animate({ scrollTop: top}, 500);
   })
 
