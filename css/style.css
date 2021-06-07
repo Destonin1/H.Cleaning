@@ -818,6 +818,7 @@ body {
 
 .next1:focus, .prev1:focus {
 	background: #cde9f7;
+	outline: none;
 }
 
 .next1:hover, .prev1:hover {
