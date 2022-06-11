@@ -105,9 +105,17 @@ $(".header_menu").on("click","a", function (event) {
         event.preventDefault();
         $('.header_menu').toggleClass('phone_menu_active');
         var id  = $(this).attr('href'),
-        top = $(id).offset().top - 180;
+        top = $(id).offset().top - 150;
         $('body,html').animate({ scrollTop: top}, 500);
-  })
+})
+
+$(".link_to_section").on("click", function (event) {
+    event.preventDefault();
+    $('.header_menu').toggleClass('phone_menu_active');
+    var id  = $(this).attr('href'),
+    top = $(id).offset().top - 150;
+    $('body,html').animate({ scrollTop: top}, 500);
+})
 
 $(window).scroll(function(){
 	if ($(this).scrollTop() > 84 ){
@@ -117,5 +125,28 @@ $(window).scroll(function(){
 		$('.header_menu_row.fixed').removeClass("fixed");
 	}
 });
+
+const form = document.getElementById('form_block');
+const modal = document.getElementsByClassName('modal')[0];
+const modalWrap = document.getElementsByClassName('modal__wrap')[0];
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const title = document.getElementsByClassName('modal__title')[0];
+  const content = document.getElementsByClassName('modal__content')[0];
+  title.textContent = "Confirm";
+  content.textContent = "Thank you for choosing us!";
+  modal.style.transform = 'scale(1)';
+  modalWrap.classList.add('modal__wrap-active');
+})
+
+const closeBtns = document.getElementsByClassName('modal_close');
+
+for (let i = 0; i < closeBtns.length;i++) {
+  closeBtns[i].addEventListener('click', event => {
+    modal.style.transform = 'scale(0)';
+    modalWrap.classList.remove('modal__wrap-active');
+  })
+}
     
 });

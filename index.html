@@ -67,7 +67,7 @@
 			<div class="container">
 				<div class="header_menu_wrap">
 					<div class="header_logo header_menu_item">
-						<a href="#"><img src="img/logo.png" alt="logo"></a>
+						<a href="#header" class="link_to_section"><img src="img/logo.png" alt="logo"></a>
 					</div>
 					<div class="menu_btn"><span></span></div>
 					<div class="header_menu header_menu_item">
@@ -81,7 +81,7 @@
 						</ul>
 					</div>
 					<div class="header_btn header_menu_item">
-						<button class="header_button">Request a Quote</button>
+						<a class="header_link link_to_section" href="#form">Request a Quote</a>
 					</div>
 				</div>
 			</div>
@@ -94,21 +94,21 @@
 				<div class="titles_slider_item">
 					<h3>We clean a Whole lot more!</h3>
 					<h1>Cleaning Yours House Make World & Clean Mine </h1>
-					<a class="title_button" href="#">Boot Today</a>
+					<a class="title_button link_to_form" href="#form">Boot Today</a>
 				</div>
 			</div>
 			<div class="titles_slider_item_wrap">
 				<div class="titles_slider_item">
 					<h3>We clean a Whole lot more!</h3>
 					<h1>Cleaning Yours House Make World & Clean Mine </h1>
-					<a class="title_button" href="#">Boot Today</a>
+					<a class="title_button link_to_form" href="#form">Boot Today</a>
 				</div>
 			</div>
 			<div class="titles_slider_item_wrap">
 				<div class="titles_slider_item">
 					<h3>We clean a Whole lot more!</h3>
 					<h1>Cleaning Yours House Make World & Clean Mine </h1>
-					<a class="title_button" href="#">Boot Today</a>
+					<a class="title_button link_to_form" href="#form">Boot Today</a>
 				</div>
 			</div>
 		</div>
@@ -391,7 +391,7 @@
 	<section id="reviews">
 		<div class="reviews_title">
 			<h2>Delivering the Best Service<br>Solution to Our Client</h2>
-			<a href="#">Book Today</a>
+			<a class="link_to_form" href="#form">Book Today</a>
 		</div>
 		<div class="container">
 			<div class="reviews_slider_wrap">
@@ -599,11 +599,11 @@
 							<h3>Get a Free Quote</h3>
 						</div>
 						<div class="form_block">
-							<form>
-								<input class="input_field" type="text" name="name" placeholder="Your Name">
-								<input class="input_field" type="text" name="address" placeholder="Email Address">
-								<input class="input_field" type="text" name="phone" placeholder="Phone Number">
-								<input class="submite_btn" type="submite" name="submite" value="Submite Now">
+							<form id="form_block">
+								<input class="input_field" type="text" name="name" placeholder="Your Name" required>
+								<input class="input_field" type="text" name="email" placeholder="Email Address" required>
+								<input class="input_field" type="text" name="phone" placeholder="Phone Number" required>
+								<input class="submite_btn" type="submit" value="Submite Now">
 							</form>
 						</div>
 					</div>
@@ -725,6 +725,18 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal">
+		<div class="modal__wrap">
+			<div class="modal__header">
+				<h3 class="modal__title"></h3>
+				<div class="modal__close modal_close">&times</div>
+			</div>
+			<div class="modal__content"></div>
+			<div class="modal__btn modal_close">Ok</div>
+		</div>
+		<div class="modal__bg"></div>
+	</div>
 
 
 
