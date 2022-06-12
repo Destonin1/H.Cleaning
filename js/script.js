@@ -132,12 +132,7 @@ const modalWrap = document.getElementsByClassName('modal__wrap')[0];
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  const title = document.getElementsByClassName('modal__title')[0];
-  const content = document.getElementsByClassName('modal__content')[0];
-  title.textContent = "Confirm";
-  content.textContent = "Thank you for choosing us!";
-  modal.style.transform = 'scale(1)';
-  modalWrap.classList.add('modal__wrap-active');
+  callModal("Confirm","Thank you for choosing us!");
 })
 
 const closeBtns = document.getElementsByClassName('modal_close');
@@ -147,6 +142,20 @@ for (let i = 0; i < closeBtns.length;i++) {
     modal.style.transform = 'scale(0)';
     modalWrap.classList.remove('modal__wrap-active');
   })
+}
+
+const inputSubmit = document.getElementsByClassName('submit_bg')[0];
+inputSubmit.addEventListener('click', event => {
+  callModal("Confirm","You can check out your email in the and of the week for the latest updates.");
+})
+
+function callModal(titleText, contentText) {
+  const title = document.getElementsByClassName('modal__title')[0];
+  const content = document.getElementsByClassName('modal__content')[0];
+  title.textContent = titleText;
+  content.textContent = contentText;
+  modal.style.transform = 'scale(1)';
+  modalWrap.classList.add('modal__wrap-active');
 }
     
 });
