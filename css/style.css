@@ -1,3 +1,4 @@
+
 * {
 	margin: 0;
 	padding: 0;
@@ -210,8 +211,8 @@ body {
 /* TITLES */
 
 .titles_slider_item {
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../img/kitchen.jpg') no-repeat center / cover;
 	background: -o-linear-gradient( rgba(17, 117, 183, 0.5), rgba(0, 0, 0, 0.5)), url('../img/kitchen.jpg') no-repeat center / cover;
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../img/kitchen.jpg') no-repeat center / cover;
 	background: linear-gradient( rgba(17, 117, 183, 0.5), rgba(0, 0, 0, 0.5)), url('../img/kitchen.jpg') no-repeat center / cover;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -304,6 +305,8 @@ body {
 }
 
 .about_company_img img {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	height: 100%;
 }
@@ -689,8 +692,8 @@ body {
 }
 
 .reviews_title {
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(246, 169, 55, 0.9)), to(rgba(246, 169, 55, 0.9))), url('../img/roof.jpg') no-repeat top / cover;
 	background: -o-linear-gradient( rgba(246, 169, 55, 0.9), rgba(246, 169, 55, 0.9)), url('../img/roof.jpg') no-repeat top / cover;
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(246, 169, 55, 0.9)), to(rgba(246, 169, 55, 0.9))), url('../img/roof.jpg') no-repeat top / cover;
 	background: linear-gradient( rgba(246, 169, 55, 0.9), rgba(246, 169, 55, 0.9)), url('../img/roof.jpg') no-repeat top / cover;
 	padding: 120px 0 330px 0;
 	text-align: center;
@@ -1181,8 +1184,8 @@ body {
 /* FOOTER */
 
 #footer {
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 100, 183, 0.9)), to(rgba(17, 100, 183, 0.9))), url('../img/footer-bg.jpg') no-repeat center / cover;
 	background: -o-linear-gradient( rgba(17, 100, 183, 0.9), rgba(17, 100, 183, 0.9)), url('../img/footer-bg.jpg') no-repeat center / cover;
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 100, 183, 0.9)), to(rgba(17, 100, 183, 0.9))), url('../img/footer-bg.jpg') no-repeat center / cover;
 	background: linear-gradient( rgba(17, 100, 183, 0.9), rgba(17, 100, 183, 0.9)), url('../img/footer-bg.jpg') no-repeat center / cover; 
 }
 
@@ -1367,7 +1370,9 @@ body {
 	content: " ";
 	width: 100%;
 	height: 100%;
-	transform: scale(0);
+	-webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	        transform: scale(0);
 }
 
 .modal__bg {
@@ -1390,22 +1395,40 @@ body {
 	position: absolute;
 	top: 50%;
 	right: 50%;
-	transform: translateX(50%) translateY(-50%) scale(0);
+	-webkit-transform: translateX(50%) translateY(-50%) scale(0);
+	    -ms-transform: translateX(50%) translateY(-50%) scale(0);
+	        transform: translateX(50%) translateY(-50%) scale(0);
 	border: 1px solid #000;
 	z-index: 91;
 	border-radius: 5px;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: -webkit-transform 0.3s;
+	-o-transition: transform 0.3s;
 	transition: transform 0.3s;
+	transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .modal__wrap-active {
-	transform: translateX(50%) translateY(-50%) scale(1);
+	-webkit-transform: translateX(50%) translateY(-50%) scale(1);
+	    -ms-transform: translateX(50%) translateY(-50%) scale(1);
+	        transform: translateX(50%) translateY(-50%) scale(1);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: -webkit-transform 0.3s;
+	-o-transition: transform 0.3s;
 	transition: transform 0.3s;
+	transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .modal__header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 	width: 100%;
 }
@@ -1420,7 +1443,8 @@ body {
 }
 
 .modal__close {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	display: inline-block;
 	font-size: 36px;
 	color: #f2a93d;
@@ -1942,8 +1966,8 @@ body {
 	}
 
 	.about_company_textblock {
-		background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../img/cleaning_guy.jpg') no-repeat center / cover;
 		background: -o-linear-gradient( rgba(17, 117, 183, 0.5), rgba(0, 0, 0, 0.5)), url('../img/cleaning_guy.jpg') no-repeat center / cover;
+		background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../img/cleaning_guy.jpg') no-repeat center / cover;
 		background: linear-gradient( rgba(17, 117, 183, 0.5), rgba(0, 0, 0, 0.5)), url('../img/cleaning_guy.jpg') no-repeat center / cover;
 		padding: 150px 25px;
 		margin: 0;
@@ -2042,8 +2066,8 @@ body {
 	}
 
 	.form_right_top {
-		background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../img/quote.jpg') no-repeat top / cover;
 		background: -o-linear-gradient( rgba(17, 117, 183, 0.5), rgba(0, 0, 0, 0.5)), url('../img/quote.jpg') no-repeat top / cover;
+		background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.5)), to(rgba(0, 0, 0, 0.5))), url('../img/quote.jpg') no-repeat top / cover;
 		background: linear-gradient( rgba(17, 117, 183, 0.5), rgba(0, 0, 0, 0.5)), url('../img/quote.jpg') no-repeat top / cover;
 		margin: 0;
 		padding: 110px 20px 60px 20px;
@@ -2122,8 +2146,8 @@ body {
 		top: -100%;
 		width: 100%;
 		height: 100%;
-		background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.8)), to(rgba(0, 0, 0, 0.8)));
 		background: -o-linear-gradient( rgba(17, 117, 183, 0.8), rgba(0, 0, 0, 0.8));
+		background: -webkit-gradient( linear, left top, left bottom, from(rgba(17, 117, 183, 0.8)), to(rgba(0, 0, 0, 0.8)));
 		background: linear-gradient( rgba(17, 117, 183, 0.8), rgba(0, 0, 0, 0.8));
 		z-index: 90;
 		-webkit-transition: 0.4s;
@@ -2569,5 +2593,4 @@ body {
 		width: 100%;
 	}
 }
-
 
